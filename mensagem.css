@@ -17,8 +17,9 @@ header{
 
 header audio{
     text-align: center;
-    margin-left: 45px;
+    margin-left: 50px;
     width: 280px;
+    display: none;
 }
 
 header h1{
