@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(6, 1, 30);
+}
+
+header{
+    max-width:600px;
+    min-width: 320px;
+    margin: auto;
+}
+
+header audio{
+    text-align: center;
+    margin-left: 45px;
+    width: 280px;
+}
+
+header h1{
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header p{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+main{
+    max-width:600px;
+    min-width: 320px;
+    margin: auto;
+}
+
+main p{
+    color: white;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contador {
+    justify-content: center; /* centro horizontal */
+    
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
+.contador div {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.contador span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: .4} 
+  to {opacity: 1}
+}

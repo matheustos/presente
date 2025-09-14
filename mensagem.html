@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor da minha vida 🩷🩷🩷</title>
+    <link rel="stylesheet" href="mensagem.css">
+</head>
+<body>
+    <header>
+        <h1>Thaty e Matheus</h1>
+        <audio id="meuAudio" src="The Temptations - My Girl.mp3" controls></audio>
+        <p>Toque o áudio acima para ouvir a música</p>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="IMG-20241229-WA0038.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMG-20250420-WA0072.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMG-20250810-WA0014.jpg" style="width:60%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Screenshot_20250914-024239.png" style="width:60%">
+        </div>
+    </div><br><br>
+    <main>
+        <p>Princesa linda,</p><br><br>
+        <p>Dia 05/09/2025 celebramos um ano desde que nossos caminhos se cruzaram naquela triha, e desde então, minha vida ganhou cores que eu nem sabia que existiam. Cada momento ao seu lado é como um pedaço de eternidade, e eu me pego sorrindo só de pensar em você. <br><br>
+
+        O presente que você me deu, feito à mão, com todo carinho e cuidado, é um reflexo perfeito de quem você é: especial, única e cheia de amor para dar. Cada detalhe me deixou ainda mais apaixonado, me lembrando de como sou sortudo por ter você na minha vida. <br><br>
+
+        Você não é só minha namorada, você é minha inspiração, meu porto seguro, meu riso fácil e minha paz. Com você, aprendi que a felicidade mora nos pequenos gestos, no olhar que se encontra, na mão que se segura e no amor que se sente sem precisar de palavras. <br><br>
+
+        Eu te amo profundamente, mais do que qualquer frase poderia expressar. Obrigado por ser você, por transformar minha vida, e por me ensinar, todos os dias, o que é amar de verdade. Que este seja apenas o primeiro de muitos anos que vamos compartilhar, construindo nossa história com carinho, cumplicidade e amor infinito. <br><br>
+
+        Com todo o meu coração,<br>
+        Matheus</p><br><br>
+
+        <h2>Juntos há</h2>
+        <div class="contador">
+            <div><span id="anos">0</span><br>anos</div>
+            <div><span id="dias">0</span><br>dias</div>
+            <div><span id="horas">0</span><br>horas</div>
+            <div><span id="minutos">0</span><br>minutos</div>
+            <div><span id="segundos">0</span><br>segundos</div>
+        </div>
+        
+    </main>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000); // muda a cada 3 segundos
+        }
+
+        // Data do início do relacionamento
+        const dataInicio = new Date("2024-09-05T19:10:00"); 
+
+        function atualizarContador() {
+            const agora = new Date();
+            let diff = agora - dataInicio;
+
+            const segundos = Math.floor(diff / 1000) % 60;
+            const minutos = Math.floor(diff / (1000 * 60)) % 60;
+            const horas = Math.floor(diff / (1000 * 60 * 60)) % 24;
+            const diasTotais = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const anos = Math.floor(diasTotais / 365);
+            const dias = diasTotais % 365;
+
+            document.getElementById("anos").textContent = anos;
+            document.getElementById("dias").textContent = dias;
+            document.getElementById("horas").textContent = horas;
+            document.getElementById("minutos").textContent = minutos;
+            document.getElementById("segundos").textContent = segundos;
+        }
+
+        // Atualiza a cada segundo
+        setInterval(atualizarContador, 1000);
+        atualizarContador(); // Inicializa na hora de carregar
+
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('meuAudio');
+            audio.play().catch(() => {
+                console.log("Autoplay bloqueado, o usuário precisa interagir para tocar.");
+            });
+        });
+
+    </script>
+</body>
+</html>
